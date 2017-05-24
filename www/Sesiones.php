@@ -33,7 +33,7 @@
 
     //se incluye la librería
     require_once('lib/nusoap.php');
-    $urlWebService = 'C:/wamp/www/index.php';
+    $urlWebService = 'C:/wamp/www/Sessiones.php';
     $urlWSDL = $urlWebService . '?wsdl';
     // Creo el objeto soapclient
     $clienteSOAP = new nusoap_client($urlWSDL, 'wsdl');
@@ -43,5 +43,63 @@
     echo '<pre>';
     print_r($respuesta);
    
+   
+
+require_once('lib/nusoap.php');
+	function getProd($categoria) {
+        if ($categoria == "libros") {
+            return join(",", array(
+                "El señor de los anillos",
+                "Los límites de la Fundación",
+                "The Rails Way"));
+        }
+        else {
+            return "No hay productos de esta categoria";
+        }
+    }
+      
+    $server = new soap_server();
+    $server->configureWSDL("producto", "urn:producto");
+      
+    $server->register("getProd",
+        array("categoria" => "xsd:string"),
+        array("return" => "xsd:string"),
+        "urn:producto",
+        "urn:producto#getProd",
+        "rpc",
+        "encoded",
+        "Nos da una lista de productos de cada categoría");
+
+    $HTTP_RAW_POST_DATA = (isset($HTTP_RAW_POST_DATA)) ? $HTTP_RAW_POST_DATA : '';
+    $server->service($HTTP_RAW_POST_DATA);
+
+
+   require_once('lib/nusoap.php');
+    $cliente = new nusoap_client("http://localhost/Sessiones.php");
+      
+    $error = $cliente->getError();
+    if ($error) {
+        echo "<h2>Constructor error</h2><pre>" . $error . "</pre>";
+    }
+      
+    $result = $cliente->call("getProd", array("categoria" => "libros"));
+      
+    if ($cliente->fault) {
+        echo "<h2>Fault</h2><pre>";
+        print_r($result);
+        echo "</pre>";
+    }
+    else {
+        $error = $cliente->getError();
+        if ($error) {
+            echo "<h2>Error</h2><pre>" . $error . "</pre>";
+        }
+        else {
+            echo "<h2>Libros</h2><pre>";
+            echo $result;
+            echo "</pre>";
+        }
+    }
+    
 
 ?>

@@ -69,7 +69,7 @@ session_start();
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="css1.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -267,7 +267,7 @@ session_start();
                     <h1 class="intro-text text-center" id="pedidos">P E D I D O S</h1>
                     <h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>
                     <div style="display: -webkit-flex;display: flex;">
-                    <div  action="" title="Consulta" method="POST" style="width: 50%;">
+                    <form  action="" title="Consulta" method="POST" style="width: 50%;">
                     <hr class="tagline-divider">
                     <h2 style="text-align: center;"> BUSCAR </h2>
 
@@ -277,12 +277,54 @@ session_start();
                             <tr>
                                 <td><h4>NOMBRE</h4>
                                 <input type="text" name="nombre">
+                                <h4>
                                 <input type="submit" name="consultar" value=" - CONSULTAR -" align="center">
+                                </h4>
                                 </td>
                             </tr>
                         </table>
-                    </div>                    
-                    
+                          <font style="color:black;" align="center"  face="Calibri,arial" size=4>             
+                    <?php
+                        if ($_POST) {
+                        $busqueda=$_POST['nombre'];
+                        try{
+
+                            $conexion=new PDO('mysql:host=localhost; dbname=clinn_tintoreria','root','paulico99');
+                            
+                            $conexion->exec("SET CHARACTER SET utf8");
+                            $Cons="select * from pedido where nombre= :n_art";
+                            $resul=$conexion->prepare($Cons);
+                            $resul->execute(array(":n_art"=>$busqueda)); 
+                            while($registro=$resul->fetch(PDO::FETCH_ASSOC)){
+                                //echo ("CONSULTA");
+                                echo "<br>";
+                                echo("NOMBRE: ".$registro['nombre']);
+                                echo "<br>"; 
+                                echo ("CANTIDAD: ".$registro['cantidad']);
+                                echo "<br>"; 
+                                echo ("TIPO SERVICIO: ".$registro['tipo_servicio']);
+                                echo "<br>";
+                                echo ("TIPO PEDIDO: ".$registro['tipo_pedido']);
+                                echo "<br>";
+                                echo ("FECHA PEDIDO: ".$registro['fecha_pedido']);
+                                echo "<br>";
+                                echo ("FECHA ENTREGA: ".$registro['fecha_entrega']);
+                                echo "<br>";
+                                echo ("STATUS: ".$registro['status']);
+                                echo "<br>";
+
+                            }
+                            $resul->closeCursor();
+                            }catch(Excepcion $e){
+
+                                die('Error:'. $e->GetMessage());
+                            }
+
+                        }
+                    ?>
+                    </font>
+                    </form>
+
                     <div action="insertar.php" title="Guardar" method="POST" style="width: 50%;"> 
                     <hr class="visible-xs">
                     <hr class="tagline-divider">
@@ -348,7 +390,9 @@ session_start();
                             <tr>
                                 <td><h4>Clave</h4>
                                 <input type="text" name="nombre">
+                                <h4>
                                 <input type="submit" name="consultar" value=" - CONSULTAR -" align="center">
+                                </h4>
                                 </td>
                             </tr>
                         </table>
@@ -817,46 +861,6 @@ session_start();
 				});
 
     </script>
-
-    <?php
-    //incluyo la librería
-    require_once('lib/nusoap.php');
-    //creo el objeto soap_server y lo configuro
-    $server = new soap_server;
-    $server->configureWSDL('PHPCentral', 'urn:phpcentral');
-    $server->wsdl->schemaTargetNamespace = 'urn:phpcentral';
-    //declaro la función del webservice
-    function saludar($nombre) {
-        if (empty($nombre)) {
-            return new soap_fault('Cliente', '', 'Ingrese su nombre!');
-        }
-        return "Hola " . $nombre;
-    }
-    //registro la función del webservice
-    $server->register(
-            'saludar' //nombre de la función
-            , array('nombre' => 'xsd:string') //parametro de entrada (un string)
-            , array('return' => 'xsd:string')  //parametro de retorno (un string)
-    );
-    // se crea el HTTP listener
-    $HTTP_RAW_POST_DATA = (isset($HTTP_RAW_POST_DATA)) ? $HTTP_RAW_POST_DATA : '';
-    $server->service($HTTP_RAW_POST_DATA);
-    exit();
-    ?>
-
-    <?php
-    //se incluye la librería
-    require_once('lib/nusoap.php');
-    $urlWebService = 'C:/wamp/www/index.php';
-    $urlWSDL = $urlWebService . '?wsdl';
-    // Creo el objeto soapclient
-    $clienteSOAP = new nusoap_client($urlWSDL, 'wsdl');
-    // invocación del método del webservice
-    $respuesta = $clienteSOAP->call('saludar', array('nombre' => 'Fernando Mosquera'));
-    // muestro la respuesta
-    echo '<pre>';
-    print_r($respuesta);
-    ?>
 
 <style type="">
     li:hover {
