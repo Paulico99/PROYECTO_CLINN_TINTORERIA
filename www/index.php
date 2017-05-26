@@ -1,6 +1,4 @@
 <?php
-
-
 if(isset($_COOKIE['contador']))
   { 
     // Caduca 
@@ -12,7 +10,6 @@ if(isset($_COOKIE['contador']))
     // Caduca  
     setcookie('contador', 1, time() + 365 * 24 * 60 * 60 ); // 365 * 24 * 60 * 60
     $mensaje2 = "<h4>BIENVENIDO PROFE SALINAS A LA PAGINA VIEW PULSORO</h4>" ;
-
   } 
 session_start();
     $_SESSION['nombres'] = "CLIENTE !";
@@ -27,17 +24,14 @@ session_start();
     //echo "<h2 class='text-center'>EL NOMBRE ES : $USUARIO </h2> <br>";
     
     $Cerrar = "<h4><p><a href ='Sesiones.php'>CERRAR SESSION</a></p></h4>";       
-
     if (empty($_SESSION['count'])) {
        $_SESSION['count'] = 1;
     } else {
        $_SESSION['count']++;
     }
-
     $numeros = "<p>Ha visto esta página $_SESSION[count]<p>";
     //session_unset();
     //session_destroy();
-
     //if(isset($_SESSION["nombres"])){
     //  $Session = "<p> SU NOMBRE ES  $_SESSION[nombres]</p>";
     //}else{
@@ -288,7 +282,6 @@ session_start();
                         if ($_POST) {
                         $busqueda=$_POST['nombre'];
                         try{
-
                             $conexion=new PDO('mysql:host=localhost; dbname=clinn_tintoreria','root','paulico99');
                             
                             $conexion->exec("SET CHARACTER SET utf8");
@@ -312,14 +305,11 @@ session_start();
                                 echo "<br>";
                                 echo ("STATUS: ".$registro['status']);
                                 echo "<br>";
-
                             }
                             $resul->closeCursor();
                             }catch(Excepcion $e){
-
                                 die('Error:'. $e->GetMessage());
                             }
-
                         }
                     ?>
                     </font>
@@ -671,7 +661,6 @@ session_start();
                             <td>Gruesa</td>
                             <td style="color: #00BFFF;">200$</td>
                         </tr>
-
                         <tr>
                             <td style="height: 50px;""></td>
                         </tr>
@@ -709,12 +698,9 @@ session_start();
                         </form>
 
                         <?php 
-
                         if ($_GET['buscador'])
                         {
-
                         $buscar = $_GET['palabra'];
-
                         if (empty($buscar))
                         {
                         echo "No se ha ingresado ninguna palabra";
@@ -729,7 +715,6 @@ session_start();
                             $Nombre = $xml->list->item->city["name"];
                             $precipitacion = $xml->list->item->precipitation["mode"];
                             }
-
                         }
                             ?>
                             <html>
@@ -793,25 +778,25 @@ session_start();
                 <div class="clearfix"></div>
             </div>
         </div>
-    </div>			
+    </div>          
  </div>
   <script src="js/buscador.js"></script>
     <script src = "js/lightbox-plus-jquery.min.js">
-						        		      </script>
-    				<div  class="container" class="intro-text text-center" class="img-responsive img-border">
-        				<div id=galeria class="row">
-            					<div class="box">
-            						
-					            		  <hr class="tagline-divider">
-							        	  <h2 class="intro-text text-center" >G A L E R I A</h2>
-							        	  <hr class="tagline-divider">
-										<?php 
-											include ("classGaleria.php")
-										?>
-									
-								</div>  
-						</div>
-					</div>
+                                              </script>
+                    <div  class="container" class="intro-text text-center" class="img-responsive img-border">
+                        <div id=galeria class="row">
+                                <div class="box">
+                                    
+                                          <hr class="tagline-divider">
+                                          <h2 class="intro-text text-center" >G A L E R I A</h2>
+                                          <hr class="tagline-divider">
+                                        <?php 
+                                            include ("classGaleria.php")
+                                        ?>
+                                    
+                                </div>  
+                        </div>
+                    </div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -823,43 +808,35 @@ session_start();
     $('.carousel').carousel({
         interval: 1500 //changes the speed
     })
-
     $('#MOSTRAR').click(function(env){
-
         $('#ABRIR').toggle(2000, function(){
             alert("LISTO  SU ACCION SE HA REALIZADO")
         });
     });
-
     $(document).ready(function(){
-				  // Initialize Tooltip
-				  $('[data-toggle="tooltip"]').tooltip(); 
-				  
-				  // Add smooth scrolling to all links in navbar + footer link
-				  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-				    // Make sure this.hash has a value before overriding default behavior
-				    if (this.hash !== "") {
-
-				      // Prevent default anchor click behavior
-				      event.preventDefault();
-
-				      // Store hash
-				      var hash = this.hash;
-
-				      // Using jQuery's animate() method to add smooth page scroll
-				      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-				      $('html, body').animate({
-				        scrollTop: $(hash).offset().top
-				      }, 700, function(){
-				   
-				        // Add hash (#) to URL when done scrolling (default click behavior)
-				        window.location.hash = hash;
-				      });
-				    } // End if
-				  });
-				});
-
+                  // Initialize Tooltip
+                  $('[data-toggle="tooltip"]').tooltip(); 
+                  
+                  // Add smooth scrolling to all links in navbar + footer link
+                  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                      // Prevent default anchor click behavior
+                      event.preventDefault();
+                      // Store hash
+                      var hash = this.hash;
+                      // Using jQuery's animate() method to add smooth page scroll
+                      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                      $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                      }, 700, function(){
+                   
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                      });
+                    } // End if
+                  });
+                });
     </script>
 
 <style type="">
