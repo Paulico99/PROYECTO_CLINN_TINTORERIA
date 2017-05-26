@@ -267,7 +267,7 @@ session_start();
                     <h1 class="intro-text text-center" id="pedidos">P E D I D O S</h1>
                     <h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>
                     <div style="display: -webkit-flex;display: flex;">
-                    <form  action="" title="Consulta" method="POST" style="width: 50%;">
+                    <form  action="#pedidos" title="Consulta" method="POST" style="width: 50%;">
                     <hr class="tagline-divider">
                     <h2 style="text-align: center;"> BUSCAR </h2>
 
@@ -325,143 +325,9 @@ session_start();
                     </font>
                     </form>
 
-                    <div action="insertar.php" title="Guardar" method="POST" style="width: 50%;"> 
-                    <hr class="visible-xs">
-                    <hr class="tagline-divider">
-
-                   <h2 align="center" style="color:black;" face="Calibri,arial"> AGREGAR PEDIDO </h2>
-                     <hr class="tagline-divider">
-                        <table>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>NOMBRE</h4>
-                                 </td>
-
-                                <td style="width: 10px;">
-                                <input type="text" name="nombre">
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>DESCRIPCION</h4> 
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="des">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>PRECIO</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="precio">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>CANTIDAD</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="cantidad" > 
-                                </td>
-                                <td style="width: 10px;">
-                                <h4>
-                                <input type="submit" name="enviado" value=" - GUARDAR -">
-                                </h4>
-                           </td>
-                            </tr> 
-                     </table>
-                    </div>  
-                    </div>  
-<h3>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h3>
-                    <div style="display: -webkit-flex;display: flex;">
-                    <div  action="" title="Consulta" method="POST" style="width: 50%;">
-                    <hr class="tagline-divider">
-
-                    <h2 style="text-align: center;"> ELIMINAR </h2>
-
-                        <hr class="tagline-divider">
-
-                        <table>
-                            <tr>
-                                <td><h4>Clave</h4>
-                                <input type="text" name="nombre">
-                                <h4>
-                                <input type="submit" name="consultar" value=" - CONSULTAR -" align="center">
-                                </h4>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>                    
-                    
-                    <div action="insertar.php" title="Guardar" method="POST" style="width: 50%;"> 
-                    <hr class="visible-xs">
-                    <hr class="tagline-divider">
-
-                   <h2 align="center" style="color:black;" face="Calibri,arial"> MODIFICAR PEDIDO </h2>
-                     <hr class="tagline-divider">
-                        <table>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>Clave</h4>
-                                 </td>
-
-                                <td style="width: 10px;">
-                                <input type="text" name="Clave">
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>NOMBRE</h4>
-                                 </td>
-
-                                <td style="width: 10px;">
-                                <input type="text" name="nombre">
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>DESCRIPCION</h4> 
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="des">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>PRECIO</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="precio">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>CANTIDAD</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="cantidad" > 
-                                </td>
-                                <td style="width: 10px;">
-                                <h4>
-                                <input type="submit" name="enviado" value=" - GUARDAR -">
-                                </h4>
-                           </td>
-                            </tr> 
-                     </table>
-                    </div>  
-                    </div> 
-
-                    <h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>
+                   
+                    <!--<br>
+                    //<h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>-->
         </div>
         <!-- /.container -->
     </nav>
