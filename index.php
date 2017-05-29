@@ -11,7 +11,7 @@ if(isset($_COOKIE['contador']))
   { 
     // Caduca  
     setcookie('contador', 1, time() + 365 * 24 * 60 * 60 ); // 365 * 24 * 60 * 60
-    $mensaje2 = "<h4>BIENVENIDO PROFE SALINAS A LA PAGINA VIEW PULSORO</h4>" ;
+    $mensaje2 = "<h4>BIENVENIDO PROFE SALINAS A LA PAGINA CLINN ECOTINTORERIA</h4>" ;
 
   } 
 session_start();
@@ -58,7 +58,7 @@ session_start();
 
 
 
-    <title>Inicio</title>
+    <title>CLINN ECOTINTORERIA</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -100,34 +100,43 @@ session_start();
     </header>
  <div class="wrap">    
     <div class="brand"></div>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse collapse" id="bs-example-navbar-collapse-1">
                 <div align="right">
                 <input type="search" placeholder="Buscar . . ." id="inputBusqueda">
 
                 </div>
+                </div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 
+        </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                       <img class="logo" src="img/FONDO2.png" alt="" width="200" height="100">
+                <li style="width: 550px;">
+                <a href="#page-top" class="page-scroll">
+                    <img class="img-responsive" src="img/FONDO2.png" alt="" width="200" >
+                </a>
+                </li>
+                    <li id="Mservicios" onclick="Fservicio()">
+                        <a href="#precios">PRECIOS</a>
                     </li>
-                   <li style = "width:100px;height: 100px;">
-                        
-                    </li>
-
-                        
-                    <li>
-                        <a href="#precios" text="center-block">PRECIOS</a>
-                    </li>
-                    <li>
+                    <li id="MPedido" onclick="Fpedido()">
                         <a href="#servicios">SERVICIOS</a>
                     </li>
-                    <li>
-                        <a href="#pedidos">PEDIDOS</a>
+                    <li id="MContact" onclick="FContact()">
+                    <a href="#pedidos">PEDIDOS</a>
                     </li>
-                    <li>
+                     <li>
                         <a href="#contactanos">CONTACTANOS</a>
                     </li>
                     <li>
@@ -144,6 +153,9 @@ session_start();
             </div>
             <!-- /.navbar-collapse -->
         </div>
+       
+        <!-- /.container-fluid -->
+    
         <header>
         <div class="search" id="search">
                  <table class="search-table" id="searchTable">
@@ -206,8 +218,10 @@ session_start();
         </div>
         </header>
         <!-- /.container -->
+    
     </nav>
-   
+    <br>
+    <br>
       <div class="container">
         <div class="row" id="ABRIR"  >
             <div class="box">
@@ -267,7 +281,7 @@ session_start();
                     <h1 class="intro-text text-center" id="pedidos">P E D I D O S</h1>
                     <h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>
                     <div style="display: -webkit-flex;display: flex;">
-                    <form  action="" title="Consulta" method="POST" style="width: 50%;">
+                    <form  action="#pedidos" title="Consulta" method="POST" style="width: 50%;">
                     <hr class="tagline-divider">
                     <h2 style="text-align: center;"> BUSCAR </h2>
 
@@ -325,143 +339,9 @@ session_start();
                     </font>
                     </form>
 
-                    <div action="insertar.php" title="Guardar" method="POST" style="width: 50%;"> 
-                    <hr class="visible-xs">
-                    <hr class="tagline-divider">
-
-                   <h2 align="center" style="color:black;" face="Calibri,arial"> AGREGAR PEDIDO </h2>
-                     <hr class="tagline-divider">
-                        <table>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>NOMBRE</h4>
-                                 </td>
-
-                                <td style="width: 10px;">
-                                <input type="text" name="nombre">
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>DESCRIPCION</h4> 
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="des">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>PRECIO</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="precio">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>CANTIDAD</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="cantidad" > 
-                                </td>
-                                <td style="width: 10px;">
-                                <h4>
-                                <input type="submit" name="enviado" value=" - GUARDAR -">
-                                </h4>
-                           </td>
-                            </tr> 
-                     </table>
-                    </div>  
-                    </div>  
-<h3>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h3>
-                    <div style="display: -webkit-flex;display: flex;">
-                    <div  action="" title="Consulta" method="POST" style="width: 50%;">
-                    <hr class="tagline-divider">
-
-                    <h2 style="text-align: center;"> ELIMINAR </h2>
-
-                        <hr class="tagline-divider">
-
-                        <table>
-                            <tr>
-                                <td><h4>Clave</h4>
-                                <input type="text" name="nombre">
-                                <h4>
-                                <input type="submit" name="consultar" value=" - CONSULTAR -" align="center">
-                                </h4>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>                    
-                    
-                    <div action="insertar.php" title="Guardar" method="POST" style="width: 50%;"> 
-                    <hr class="visible-xs">
-                    <hr class="tagline-divider">
-
-                   <h2 align="center" style="color:black;" face="Calibri,arial"> MODIFICAR PEDIDO </h2>
-                     <hr class="tagline-divider">
-                        <table>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>Clave</h4>
-                                 </td>
-
-                                <td style="width: 10px;">
-                                <input type="text" name="Clave">
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>NOMBRE</h4>
-                                 </td>
-
-                                <td style="width: 10px;">
-                                <input type="text" name="nombre">
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>DESCRIPCION</h4> 
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="des">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>PRECIO</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="precio">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>CANTIDAD</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="cantidad" > 
-                                </td>
-                                <td style="width: 10px;">
-                                <h4>
-                                <input type="submit" name="enviado" value=" - GUARDAR -">
-                                </h4>
-                           </td>
-                            </tr> 
-                     </table>
-                    </div>  
-                    </div> 
-
-                    <h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>
+                   
+                    <!--<br>
+                    //<h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>-->
         </div>
         <!-- /.container -->
     </nav>
@@ -781,13 +661,11 @@ session_start();
                         &q=CLINN+ECOTINTORERIA"></iframe>
                     </div>
                     <br>
-                    <a href="https://www.facebook.com/elpulsoro" target="_blank"><img alt="siguenos en facebook" height="48" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" title="siguenos en facebook" width="48" /></a>
+                    <a href="https://www.facebook.com/clinnecontintoreria/" target="_blank"><img alt="siguenos en facebook" height="48" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" title="siguenos en facebook" width="48" /></a>
 
-                    <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="48" src="http://3.bp.blogspot.com/-IwxItZ1_cM0/UiX0-g2DrCI/AAAAAAAAB1c/hOSA6Uklo-I/s1600/Google%252B+alt.png" title="siguenos en Google+" width="48" /></a>
+                    <a href="https://www.facebook.com/clinnecontintoreria/" target="_blank"><img alt="siguenos en Google+" height="48" src="http://3.bp.blogspot.com/-IwxItZ1_cM0/UiX0-g2DrCI/AAAAAAAAB1c/hOSA6Uklo-I/s1600/Google%252B+alt.png" title="siguenos en Google+" width="48" /></a>
 
-                    <a href="URL-youtube" target="_blank"><img alt="Canal de youtube" height="48" src="http://1.bp.blogspot.com/-nFaU3lAbBgg/UiX1C-m6KjI/AAAAAAAAB3M/Lbf9N4I9QOg/s1600/Youtube+alt+2.png" title="Canal de youtube" width="48" /></a>
-
-                    <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="48" src="http://3.bp.blogspot.com/-sbO3cK5dmzo/UiX1BG6KASI/AAAAAAAAB2s/wYYv24Dpggw/s1600/Twitter+alt+4.png" title="siguenos en Twitter" width="48" /></a>
+                    <a href="https://www.facebook.com/clinnecontintoreria/" target="_blank"><img alt="siguenos en Twitter" height="48" src="http://3.bp.blogspot.com/-sbO3cK5dmzo/UiX1BG6KASI/AAAAAAAAB2s/wYYv24Dpggw/s1600/Twitter+alt+4.png" title="siguenos en Twitter" width="48" /></a>
 
                 </div></center>
                 <div class="clearfix"></div>
