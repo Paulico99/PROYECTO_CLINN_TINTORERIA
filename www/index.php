@@ -118,10 +118,9 @@ session_start();
                 <ul class="nav navbar-nav navbar-right">
                 <li style="width: 550px;">
                 <a href="#page-top" class="page-scroll">
-                    <a href="#pagina1"><img class="img-responsive" src="img/FONDO2.png" alt="" width="200" height="100"></a>
+                    <img class="img-responsive" src="img/FONDO2.png" alt="" width="200" >
                 </a>
                 </li>
-                
                     <li id="Mservicios" onclick="Fservicio()">
                         <a href="#precios">PRECIOS</a>
                     </li>
@@ -148,6 +147,7 @@ session_start();
             </div>
             <!-- /.navbar-collapse -->
         </div>
+        </nav>
         <!-- /.container-fluid -->
     
         <header>
@@ -212,7 +212,7 @@ session_start();
         </div>
         </header>
         <!-- /.container -->
-    </nav>
+  
    
       <div class="container">
         <div class="row" id="ABRIR"  >
