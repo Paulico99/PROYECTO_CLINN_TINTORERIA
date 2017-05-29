@@ -1,7 +1,0 @@
-<?php
-	Session_star();
-	Session_unset();
-	Session_Destroy();
-
-	echo "SE CERRO SESSION !!!"
-?>
