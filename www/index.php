@@ -54,9 +54,11 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="viewport" content="width=device−width, initial−scale=1.0" />
 
 
-    <title>Inicio</title>
+
+    <title>CLINN ECOTINTORERIA</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -67,7 +69,7 @@ session_start();
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="css1.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -96,7 +98,10 @@ session_start();
             
         </div>
     </header>
-   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+ <div class="wrap">    
+    <div class="brand"></div>
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -111,9 +116,9 @@ session_start();
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                <li style="width: 500px;">
+                <li style="width: 550px;">
                 <a href="#page-top" class="page-scroll">
-                    <img class="img-responsive" src="img/FONDO2.png" alt="" width="200" height="100">
+                    <a href="#pagina1"><img class="img-responsive" src="img/FONDO2.png" alt="" width="200" height="100"></a>
                 </a>
                 </li>
                 
@@ -144,7 +149,70 @@ session_start();
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-    </nav>  
+    
+        <header>
+        <div class="search" id="search">
+                 <table class="search-table" id="searchTable">
+                <thead>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#precios">Precios</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#servicios">Servicios</a></td></a>
+                    </tr>
+                    <tr>
+                        <td><a href="#pedidos">Pedidos</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#contactanos">Contacto</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#galeria">Galeria</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#Planchado">Planchado</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#Domicilio">Servicio a Domicilio</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#Lavado_seco">Lavado Seco</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#Edredones">Lavado de Edredones</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#express">Servicio Express</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#pantalones">pantalones</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#vestidos">Vestidos de Novia</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#cortinas">Lavado De Cortinas</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#desmanchado">Desmanchado de Prendas</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#Abrigos">Abrigos</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#Chamarras">Chamarras</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </header>
+        <!-- /.container -->
+    </nav>
    
       <div class="container">
         <div class="row" id="ABRIR"  >
@@ -194,7 +262,7 @@ session_start();
         <div class="row">
             <div class="box">
                     
-                    <hr class="tagline-divider">
+                    <hr class="tagline-divider"><br>
                     <center><h1 class="brand-name"><a id="MOSTRAR" href="#ABRIR">C L I N N    T I N T O R E R I A</h1></a></center>
                     <hr class="tagline-divider"><br>
                     <center><img class="img-responsive center-block" src="img/FONDO1.png" alt="" width="500" height="500"></center>
@@ -205,7 +273,7 @@ session_start();
                     <h1 class="intro-text text-center" id="pedidos">P E D I D O S</h1>
                     <h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>
                     <div style="display: -webkit-flex;display: flex;">
-                    <div  action="" title="Consulta" method="POST" style="width: 50%;">
+                    <form  action="#pedidos" title="Consulta" method="POST" style="width: 50%;">
                     <hr class="tagline-divider">
                     <h2 style="text-align: center;"> BUSCAR </h2>
 
@@ -215,147 +283,57 @@ session_start();
                             <tr>
                                 <td><h4>NOMBRE</h4>
                                 <input type="text" name="nombre">
+                                <h4>
                                 <input type="submit" name="consultar" value=" - CONSULTAR -" align="center">
+                                </h4>
                                 </td>
                             </tr>
                         </table>
-                    </div>                    
-                    
-                    <div action="insertar.php" title="Guardar" method="POST" style="width: 50%;"> 
-                    <hr class="visible-xs">
-                    <hr class="tagline-divider">
+                          <font style="color:black;" align="center"  face="Calibri,arial" size=4>             
+                    <?php
+                        if ($_POST) {
+                        $busqueda=$_POST['nombre'];
+                        try{
 
-                   <h2 align="center" style="color:black;" face="Calibri,arial"> AGREGAR PEDIDO </h2>
-                     <hr class="tagline-divider">
-                        <table>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>NOMBRE</h4>
-                                 </td>
+                            $conexion=new PDO('mysql:host=localhost; dbname=clinn_tintoreria','root','paulico99');
+                            
+                            $conexion->exec("SET CHARACTER SET utf8");
+                            $Cons="select * from pedido where nombre= :n_art";
+                            $resul=$conexion->prepare($Cons);
+                            $resul->execute(array(":n_art"=>$busqueda)); 
+                            while($registro=$resul->fetch(PDO::FETCH_ASSOC)){
+                                //echo ("CONSULTA");
+                                echo "<br>";
+                                echo("NOMBRE: ".$registro['nombre']);
+                                echo "<br>"; 
+                                echo ("CANTIDAD: ".$registro['cantidad']);
+                                echo "<br>"; 
+                                echo ("TIPO SERVICIO: ".$registro['tipo_servicio']);
+                                echo "<br>";
+                                echo ("TIPO PEDIDO: ".$registro['tipo_pedido']);
+                                echo "<br>";
+                                echo ("FECHA PEDIDO: ".$registro['fecha_pedido']);
+                                echo "<br>";
+                                echo ("FECHA ENTREGA: ".$registro['fecha_entrega']);
+                                echo "<br>";
+                                echo ("STATUS: ".$registro['status']);
+                                echo "<br>";
 
-                                <td style="width: 10px;">
-                                <input type="text" name="nombre">
-                                </td>
+                            }
+                            $resul->closeCursor();
+                            }catch(Excepcion $e){
 
-                            </tr>
+                                die('Error:'. $e->GetMessage());
+                            }
 
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>DESCRIPCION</h4> 
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="des">
-                                </td>
-                            </tr>
+                        }
+                    ?>
+                    </font>
+                    </form>
 
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>PRECIO</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="precio">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>CANTIDAD</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="cantidad" > 
-                                </td>
-                                <td style="width: 10px;">
-                                <h4>
-                                <input type="submit" name="enviado" value=" - GUARDAR -">
-                                </h4>
-                           </td>
-                            </tr> 
-                     </table>
-                    </div>  
-                    </div>  
-<h3>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h3>
-                    <div style="display: -webkit-flex;display: flex;">
-                    <div  action="" title="Consulta" method="POST" style="width: 50%;">
-                    <hr class="tagline-divider">
-
-                    <h2 style="text-align: center;"> ELIMINAR </h2>
-
-                        <hr class="tagline-divider">
-
-                        <table>
-                            <tr>
-                                <td><h4>Clave</h4>
-                                <input type="text" name="nombre">
-                                <input type="submit" name="consultar" value=" - CONSULTAR -" align="center">
-                                </td>
-                            </tr>
-                        </table>
-                    </div>                    
-                    
-                    <div action="insertar.php" title="Guardar" method="POST" style="width: 50%;"> 
-                    <hr class="visible-xs">
-                    <hr class="tagline-divider">
-
-                   <h2 align="center" style="color:black;" face="Calibri,arial"> MODIFICAR PEDIDO </h2>
-                     <hr class="tagline-divider">
-                        <table>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>Clave</h4>
-                                 </td>
-
-                                <td style="width: 10px;">
-                                <input type="text" name="Clave">
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>NOMBRE</h4>
-                                 </td>
-
-                                <td style="width: 10px;">
-                                <input type="text" name="nombre">
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>DESCRIPCION</h4> 
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="des">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>PRECIO</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="precio">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="width: 10px;">
-                                <h4>CANTIDAD</h4>
-                                </td>
-                                <td style="width: 10px;">
-                                <input type="text" name="cantidad" > 
-                                </td>
-                                <td style="width: 10px;">
-                                <h4>
-                                <input type="submit" name="enviado" value=" - GUARDAR -">
-                                </h4>
-                           </td>
-                            </tr> 
-                     </table>
-                    </div>  
-                    </div> 
-
-                    <h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>
+                   
+                    <!--<br>
+                    //<h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h1>-->
         </div>
         <!-- /.container -->
     </nav>
@@ -380,7 +358,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=Domicilio class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Servicio a Domicilio</strong></span></p>
                         <img itemprop="image" src="/img/domicilio.png" alt="Nuestros Servicios">
                         <p>Llevamos tu ropa a donde tu quieras(a partir de 3 prendas).</p>
@@ -389,7 +367,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=Lavado_seco class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Lavado en Seco</strong></span></p>
                         <img itemprop="image" src="/img/lavado_seco.jpg" alt="Nuestros Servicios">
                         <p>Utilizamos el mejor equipo para el lavado en seco.</p>
@@ -398,7 +376,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=Edredones class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Lavado de edredones</strong></span></p>
                         <img itemprop="image" src="/img/edredon.jpg" alt="Nuestros Servicios">
                         <p>Damos servicio de lavado y secado de edredones.</p>
@@ -407,7 +385,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=Planchado class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Servicio de Planchado</strong></span></p>
                         <img itemprop="image" src="/img/planchado.jpg" alt="Nuestros Servicios">
                         <p>Para un planchado perfecto somos tu mejor opción.</p>
@@ -416,7 +394,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=express class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Servicio Express</strong></span></p>
                         <img itemprop="image" src="/img/express.jpg" alt="Nuestros Servicios">
                         <p>Tus prendas en mismo día (llevándolas antes de las 12:00).</p>
@@ -425,7 +403,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=pantalones class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Pintado de pantalones</strong></span></p>
                         <img itemprop="image" src="/img/pantalon.jpg" alt="Nuestros Servicios">
                         <p>¡Dejamos tus pantalones como nuevos!</p>
@@ -434,7 +412,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=vestidos class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Vestidos de novia</strong></span></p>
                         <img itemprop="image" src="/img/novia.jpg" alt="Nuestros Servicios">
                         <p>Lavamos y planchamos tu vestido de novia.</p>
@@ -443,7 +421,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=cortinas class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Lavado de cortinas</strong></span></p>
                         <img itemprop="image" src="/img/cortinas.jpg" alt="Nuestros Servicios">
                         <p>Lavado y planchado (plizado) de tus cortinas.</p>
@@ -452,7 +430,7 @@ session_start();
                         <div class="uk-width-medium-1-1 uk-width-large-1-2 ">
                         <div class="uk-grid">
                         <div class="uk-width-1-2 ser-img-marg">
-                        </div><div class="uk-width-1-2">
+                        </div><div id=desmanchado class="uk-width-1-2">
                         <p class="blue-bar" style="width: 95%;"><span style="font-size: 16pt;"><strong>Desmanchado de prendas</strong></span></p>
                         <img itemprop="image" src="/img/desmanchamos.jpg" alt="Nuestros Servicios">
                         <p>Desmanchamos todo tipo de prendas.</p>
@@ -534,7 +512,7 @@ session_start();
                             <td style="height: 50px;""></td>
                         </tr>
                         <tr>
-                            <td><strong>Abrigos</strong></td>
+                            <td id=Abrigos><strong>Abrigos</strong></td>
                             <td></td>
                             <td><strong>Chaleco</strong></td>
                         </tr>
@@ -552,7 +530,7 @@ session_start();
                             <td style="color: #00BFFF;">110$</td>
                         </tr>
                         <tr>
-                            <td><strong>Chamarras</strong></td>
+                            <td id=Chamarras><strong>Chamarras</strong></td>
                             <td></td>
                             <td><strong>Gabardina</strong></td>
                             <td style="color: #00BFFF;">140$</td>
@@ -675,13 +653,11 @@ session_start();
                         &q=CLINN+ECOTINTORERIA"></iframe>
                     </div>
                     <br>
-                    <a href="https://www.facebook.com/elpulsoro" target="_blank"><img alt="siguenos en facebook" height="48" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" title="siguenos en facebook" width="48" /></a>
+                    <a href="https://www.facebook.com/clinnecontintoreria/" target="_blank"><img alt="siguenos en facebook" height="48" src="http://4.bp.blogspot.com/-LnKbkk802kw/UiXwV9rN8xI/AAAAAAAAB0Y/fQCQKFEbvjM/s1600/face.png" title="siguenos en facebook" width="48" /></a>
 
-                    <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="48" src="http://3.bp.blogspot.com/-IwxItZ1_cM0/UiX0-g2DrCI/AAAAAAAAB1c/hOSA6Uklo-I/s1600/Google%252B+alt.png" title="siguenos en Google+" width="48" /></a>
+                    <a href="https://www.facebook.com/clinnecontintoreria/" target="_blank"><img alt="siguenos en Google+" height="48" src="http://3.bp.blogspot.com/-IwxItZ1_cM0/UiX0-g2DrCI/AAAAAAAAB1c/hOSA6Uklo-I/s1600/Google%252B+alt.png" title="siguenos en Google+" width="48" /></a>
 
-                    <a href="URL-youtube" target="_blank"><img alt="Canal de youtube" height="48" src="http://1.bp.blogspot.com/-nFaU3lAbBgg/UiX1C-m6KjI/AAAAAAAAB3M/Lbf9N4I9QOg/s1600/Youtube+alt+2.png" title="Canal de youtube" width="48" /></a>
-
-                    <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="48" src="http://3.bp.blogspot.com/-sbO3cK5dmzo/UiX1BG6KASI/AAAAAAAAB2s/wYYv24Dpggw/s1600/Twitter+alt+4.png" title="siguenos en Twitter" width="48" /></a>
+                    <a href="https://www.facebook.com/clinnecontintoreria/" target="_blank"><img alt="siguenos en Twitter" height="48" src="http://3.bp.blogspot.com/-sbO3cK5dmzo/UiX1BG6KASI/AAAAAAAAB2s/wYYv24Dpggw/s1600/Twitter+alt+4.png" title="siguenos en Twitter" width="48" /></a>
 
                 </div></center>
                 <div class="clearfix"></div>
@@ -692,7 +668,7 @@ session_start();
   <script src="js/buscador.js"></script>
     <script src = "js/lightbox-plus-jquery.min.js">
 						        		      </script>
-    				<div class="container" class="intro-text text-center" class="img-responsive img-border">
+    				<div  class="container" class="intro-text text-center" class="img-responsive img-border">
         				<div id=galeria class="row">
             					<div class="box">
             						
@@ -755,6 +731,7 @@ session_start();
 				});
 
     </script>
+
 <style type="">
     li:hover {
     background-color: #C0C0C0;
